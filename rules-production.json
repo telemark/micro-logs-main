@@ -1,0 +1,6 @@
+{
+  "rules": [
+    { "pathname": "/stats/**", "dest": "stats.logs.skoleskyss.t-fk.no" },
+    { "dest": "main.logs.skoleskyss.t-fk.no" }
+  ]
+}

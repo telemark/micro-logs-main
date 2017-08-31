@@ -1,0 +1,6 @@
+{
+  "rules": [
+    { "pathname": "/stats/**", "dest": "stats.logs.skoleskyss.win" },
+    { "dest": "main.logs.skoleskyss.win" }
+  ]
+}
