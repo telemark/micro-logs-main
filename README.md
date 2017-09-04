@@ -39,7 +39,7 @@ Sets content of resultat for log
 Get next log from queue
 
 ```bash
-$ curl -v -H "Authorization: <INSERT TOKEN>" https://logs.service.io/queue/next
+$ curl -v -H "Authorization: Bearer <INSERT TOKEN>" https://logs.service.io/queue/next
 ```
 
 ### ```DELETE /queue/:id```
