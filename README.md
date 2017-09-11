@@ -54,6 +54,24 @@ $ curl -v -H "Authorization: Bearer <INSERT TOKEN>" https://logs.service.io/queu
 
 Deletes log from queue
 
+## Deployment - ZEIT/Now
+
+Change content of [production.env](production.env) and [rules.json](rules.json) to match your environment.
+
+Change content of now:alias in [package.json](package.json) to match your domains.
+
+Deploy service.
+
+```bash
+$ npm run now-deploy
+```
+
+Deploy rules
+
+```bash
+$ now alias <your main logs domain> -r rules.json
+```
+
 ## License
 
 [MIT](LICENSE)
