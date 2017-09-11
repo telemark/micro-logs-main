@@ -8,7 +8,11 @@ Main logs
 
 ## API
 
-All API calls needs an Authorization header with valid jwt  
+All API calls needs an Authorization header with valid jwt
+
+```bash
+$ curl -v -H "Authorization: Bearer <INSERT TOKEN>" https://logs.service.io/logs/latest
+```
 
 ### ```PUT /loqs```
 
@@ -17,6 +21,10 @@ Add a new log
 ### ```GET /loqs/latest```
 
 Get a list of the 40 latest entries
+
+### ```GET /loqs/latest/:limit```
+
+Get a list of the latest entries limited to the number supplied
 
 ### ```GET /loqs/:id```
 
