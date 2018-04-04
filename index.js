@@ -1,5 +1,3 @@
-'use strict'
-
 // Packages
 const Router = require('router')
 const finalhandler = require('finalhandler')
