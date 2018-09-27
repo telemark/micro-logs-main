@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.org/telemark/micro-logs-main.svg?branch=master)](https://travis-ci.org/telemark/micro-logs-main)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
-[![Greenkeeper badge](https://badges.greenkeeper.io/telemark/micro-logs-main.svg)](https://greenkeeper.io/)
 
 # micro-logs-main
 
@@ -75,5 +74,3 @@ $ now alias <your main logs domain> -r rules.json
 ## License
 
 [MIT](LICENSE)
-
-![Robohash image of micro-logs-main](https://robots.kebabstudios.party/micro-logs-main.png "Robohash image of micro-logs-main")
