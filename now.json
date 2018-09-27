@@ -1,0 +1,11 @@
+{
+  "name": "micro-logs-main",
+  "alias": [
+    "main.logs.t-fk.no"
+  ],
+  "type": "docker",
+  "dotenv": "production.env",
+  "features": {
+    "cloud": "v2"
+  }
+}

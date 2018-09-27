@@ -38,16 +38,6 @@
     "url": "https://github.com/telemark/micro-logs-main/issues"
   },
   "homepage": "https://github.com/telemark/micro-logs-main#readme",
-  "now": {
-    "alias": [
-      "main.logs.t-fk.no"
-    ],
-    "type": "npm",
-    "dotenv": "production.env",
-    "engines": {
-      "node": "8.11.1"
-    }
-  },
   "devDependencies": {
     "ava": "0.25.0",
     "axios": "0.18.0",
