@@ -1,6 +1,6 @@
 .env
+*.env
 .travis.yml
 node_modules
-production.env
 renovate.json
 test
