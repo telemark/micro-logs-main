@@ -8,7 +8,7 @@ const jwt = require('express-jwt')
 const handlers = require('./lib/handlers')
 const handleLogs = require('./lib/handle-logs')
 const handleQueue = require('./lib/handle-queue')
-const config = require('./config')
+const { JWT_SECRET } = require('./config')
 const handleUnauthorized = require('./lib/handle-unauthorized')
 
 // Initialize a new router
@@ -18,8 +18,10 @@ const router = Router()
 router.use(cors())
 
 // JWT
-router.use(jwt({ secret: config.JWT_SECRET }).unless({ path: ['/'] }))
-router.use(handleUnauthorized)
+if (JWT_SECRET) {
+  router.use(jwt({ secret: JWT_SECRET }).unless({ path: ['/'] }))
+  router.use(handleUnauthorized)
+}
 
 // ROUTES
 router.get('/', handlers.frontpage)
