@@ -1,6 +1,0 @@
-{
-  "rules": [
-    { "pathname": "/stats/**", "dest": "stats.logs.t-fk.no" },
-    { "dest": "main.logs.t-fk.no" }
-  ]
-}

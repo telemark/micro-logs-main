@@ -55,20 +55,12 @@ Deletes log from queue
 
 ## Deployment - ZEIT/Now
 
-Change content of [production.env](production.env) and [rules.json](rules.json) to match your environment.
-
-Change content of now:alias in [package.json](package.json) to match your domains.
+Change content of [now.json](now.json) to match your environment.
 
 Deploy service.
 
 ```bash
-$ npm run now-deploy
-```
-
-Deploy rules
-
-```bash
-$ now alias <your main logs domain> -r rules.json
+$ npm run deploy
 ```
 
 ## License

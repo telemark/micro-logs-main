@@ -1,11 +1,9 @@
 // Packages
 const Router = require('router')
 const finalhandler = require('finalhandler')
-const cors = require('cors')
 const jwt = require('express-jwt')
 
 // Utilities
-const handlers = require('./lib/handlers')
 const handleLogs = require('./lib/handle-logs')
 const handleQueue = require('./lib/handle-queue')
 const { JWT_SECRET } = require('./config')
@@ -14,9 +12,6 @@ const handleUnauthorized = require('./lib/handle-unauthorized')
 // Initialize a new router
 const router = Router()
 
-// CORS
-router.use(cors())
-
 // JWT
 if (JWT_SECRET) {
   router.use(jwt({ secret: JWT_SECRET }).unless({ path: ['/'] }))
@@ -24,7 +19,6 @@ if (JWT_SECRET) {
 }
 
 // ROUTES
-router.get('/', handlers.frontpage)
 router.put('/logs', handleLogs.addLog)
 router.get('/logs/:id', handleLogs.getLog)
 router.get('/logs/latest', handleLogs.getLatest)

@@ -1,11 +1,44 @@
 {
+  "version": 2,
   "name": "micro-logs-main",
+  "scope": "telemark",
   "alias": [
     "main.logs.t-fk.no"
   ],
-  "type": "docker",
-  "dotenv": "production.env",
-  "features": {
-    "cloud": "v2"
-  }
+  "env": {
+    "NODE_ENV": "production",
+    "JWT_SECRET": "@tilskudd-jwt-secret",
+    "MONGODB_CONNECTION": "@db-tfkcosmos-connection",
+    "MONGODB_COLLECTION": "tilskudd201902",
+    "MONGODB_NAME": "felles",
+    "PAPERTRAIL_HOSTNAME": "tilskudd",
+    "PAPERTRAIL_HOST": "@tfk-papertrail-host",
+    "PAPERTRAIL_PORT": "@tfk-papertrail-port"
+  },
+  "builds": [
+    {
+      "src": "/README.md",
+      "use": "@now/md"
+    },
+    {
+      "src": "/index.js",
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/README.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization",
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Max-Age": "3600"
+      }
+    }
+  ]
 }
