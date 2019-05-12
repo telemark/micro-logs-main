@@ -6,23 +6,22 @@ const jwt = require('express-jwt')
 // Utilities
 const handleLogs = require('./lib/handle-logs')
 const handleQueue = require('./lib/handle-queue')
-const { JWT_SECRET } = require('./config')
 const handleUnauthorized = require('./lib/handle-unauthorized')
 
 // Initialize a new router
 const router = Router()
 
 // JWT
-if (JWT_SECRET) {
-  router.use(jwt({ secret: JWT_SECRET }).unless({ path: ['/'] }))
+if (process.env.JWT_SECRET) {
+  router.use(jwt({ secret: process.env.JWT_SECRET }))
   router.use(handleUnauthorized)
 }
 
 // ROUTES
 router.put('/logs', handleLogs.addLog)
-router.get('/logs/:id', handleLogs.getLog)
 router.get('/logs/latest', handleLogs.getLatest)
 router.get('/logs/latest/:limit', handleLogs.getLatest)
+router.get('/logs/:id', handleLogs.getLog)
 router.post('/logs/search', handleLogs.searchLogs)
 router.post('/logs/:id/status', handleLogs.updateStatus)
 router.post('/logs/:id', handleLogs.updateLog)
