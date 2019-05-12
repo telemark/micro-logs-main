@@ -1,9 +1,9 @@
 {
   "version": 2,
-  "name": "micro-logs-main",
+  "name": "tilskudd-logs-main",
   "scope": "telemark",
   "alias": [
-    "main.logs.t-fk.no"
+    "main.logs.tilskudd.t-fk.no"
   ],
   "env": {
     "NODE_ENV": "production",
