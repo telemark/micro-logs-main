@@ -9,8 +9,8 @@
     "NODE_ENV": "production",
     "JWT_SECRET": "@tilskudd-jwt-secret",
     "MONGODB_CONNECTION": "@db-tfkcosmos-connection",
-    "MONGODB_COLLECTION": "tilskudd201902",
-    "MONGODB_NAME": "felles",
+    "MONGODB_COLLECTION": "tilskudd2020",
+    "MONGODB_NAME": "shared",
     "PAPERTRAIL_HOSTNAME": "tilskudd",
     "PAPERTRAIL_HOST": "@tfk-papertrail-host",
     "PAPERTRAIL_PORT": "@tfk-papertrail-port"
